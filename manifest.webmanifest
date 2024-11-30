@@ -9,7 +9,7 @@
     "background_color": "#035213",
     "theme_color": "#27B027",
   
-    "display": "fullscreen", 
+    "display": "standalone", 
     
     "icons": [
         {
