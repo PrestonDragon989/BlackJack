@@ -10,17 +10,17 @@ var URLS = [
   
   `${GHPATH}/blackjack.js`,
   
-  `${GHPATH}/scripts/deck.js`,
-  `${GHPATH}/scripts/logic.js`,
-  `${GHPATH}/scripts/players.js`,
+  `${GHPATH}/scripts/deck.mjs`,
+  `${GHPATH}/scripts/logic.mjs`,
+  `${GHPATH}/scripts/players.mjs`,
 
-  `${GHPATH}/scripts/input/base.js`,
-  `${GHPATH}/scripts/input/game.js`,
-  `${GHPATH}/scripts/input/start.js`,
+  `${GHPATH}/scripts/input/base.mjs`,
+  `${GHPATH}/scripts/input/game.mjs`,
+  `${GHPATH}/scripts/input/start.mjs`,
 
-  `${GHPATH}/scripts/graphics/shapes.js`,
-  `${GHPATH}/scripts/graphics/menu.js`,
-  `${GHPATH}/scripts/graphics/gameplay.js`,
+  `${GHPATH}/scripts/graphics/shapes.mjs`,
+  `${GHPATH}/scripts/graphics/menu.mjs`,
+  `${GHPATH}/scripts/graphics/gameplay.mjs`,
 
   `${GHPATH}/card-images/blank.png`,
   `${GHPATH}/card-images/club-card.png`,
