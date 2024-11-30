@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "pixel_font";
+    src: url("pixel_font.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /*overflow: auto;*/
+    background-color: rgb(3, 82, 19);
+    user-select: none;
+}
+
+#poker-container {
+    display: grid;
+    place-items: center;
+    height: 100vh; /* Use viewport height */
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+#poker-canvas {
+    /* Setting up location */
+    position: relative;
+    z-index: 0;
+
+    /* Set maximum dimensions for scaling */
+    max-width: calc(100vw - 14px); /* 100% of viewport width minus 10px for the border */
+    max-height: calc(100vh - 14px); /* 100% of viewport height minus 10px for the border */
+
+    /* Background Styling */
+    background-color: rgb(11, 125, 32);
+
+    /* Prevent overflow 
+    overflow: auto; */
+
+    /* Maintain aspect ratio */
+    aspect-ratio: 16 / 9;
+
+    /* Include border in dimensions */
+    box-sizing: border-box;
+
+    /* Border Style */
+    border: 7px solid rgb(5, 56, 14);
+}
+
+#slider-container {
+    position: absolute;
+    z-index: 1;
+    bottom: 7%; /* Adjust the distance from the bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 10%;
+    display: flex;
+    place-items: center;
+    z-index: 1; /* Ensure the slider is above the canvas */
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 5px; /* Adjust as needed */
+}
+
+#betting-slider {
+    -webkit-appearance: none; /* Remove default styles */
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    background: rgb(39, 176, 39);
+    border-radius: 3px;
+    border: 3px solid rgb(24, 82, 24);
+}
+
+/* Styles for the slider thumb */
+#betting-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styles */
+    appearance: none;
+    width: 15px;
+    height: 20px;
+    background: rgb(25, 122, 42);
+    border: 2px solid rgb(24, 82, 24);
+    border-radius: 40%;
+    cursor: pointer;
+}
+
+/* Betting Button Styles */
+#confirm-bet,
+#fold-button,
+#check-button {
+    white-space: nowrap; /* Ensure text stays on one line */
+    background-color: rgb(39, 176, 39);
+    border: 3px solid rgb(24, 82, 24);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#confirm-bet:hover,
+#fold-button:hover,
+#check-button:hover {
+    background-color: rgb(63, 203, 63);
+    transition-duration: 0.6s;
+}
+#confirm-bet:active,
+#fold-button:active,
+#check-button:active {
+    background-color: rgb(74, 236, 74);
+    transition-duration: 0s;
+}
+
+#info-block {
+    position: absolute;
+    top: -80%; /* Adjust the distance from the top as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(39, 176, 39);
+    border: 4px solid rgb(24, 82, 24);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#current-money,
+#money-bet {
+    white-space: nowrap;
+    margin: 5px 0;
+}
