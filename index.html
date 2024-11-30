@@ -9,19 +9,32 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" href="card-images/favicon.png" type="image/x-icon">
 
+        <link rel="canonical" href="https://prestondragon989.github.io/Blackjack/" />
+        <link rel="manifest" href="/Blackjack/manifest.webmanifest">
+
         <!-- Scripts -->
         <script src="scripts/logic.mjs" type="module"></script>
         <script src="scripts/graphics/shapes.mjs" type="module"></script>
         <script src="scripts/graphics/menu.mjs" type="module"></script>
         <script src="scripts/deck.mjs" type="module"></script>
         <script src="scripts/players.mjs" type="module"></script>
-
-        <!-- Main game -->
-        <script src="blackjack.js" type="module"></script>
     </head>
     <body>
         <div id="poker-container">
             <canvas id="poker-canvas" width="1024" height="576"></canvas>
         </div>
+
+        <!-- PWA Stuff -->
+        <script>
+            if (navigator.serviceWorker) {
+              navigator.serviceWorker.register (
+                '/Blackjack/sw.js',
+                {scope: '/Blackjack/'}
+              )
+            }
+        </script>
+
+        <!-- Main Game -->
+        <script src="blackjack.js" type="module"></script>
     </body>
 </html>

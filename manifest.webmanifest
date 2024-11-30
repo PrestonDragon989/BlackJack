@@ -1,0 +1,21 @@
+{
+    "name": "Blackjack",
+    "short_name": "Blackjack",
+    "description": "Basic Blackjack game for the web.",
+  
+    "scope": "/Blackjack/",
+    "start_url": "/Blackjack/",
+  
+    "background_color": "#035213",
+    "theme_color": "#27B027",
+  
+    "display": "fullscreen", 
+    
+    "icons": [
+        {
+          "src": "/Blackjack/card-images/favicon.png",
+          "type": "image/png",
+          "sizes": "70x100"
+        }
+    ]
+}
