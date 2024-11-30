@@ -1,5 +1,4 @@
-// Change this to your repository name
-var GHPATH = '/Blackjack';
+var GHPATH = '/BlackJack';
 var APP_PREFIX = 'bj_';
 var VERSION = 'version_00';
 var URLS = [    
