@@ -108,3 +108,7 @@ export default class Deck {
         return this.#blank_card;
     }
 }
+
+const sample = new Deck();
+sample.create_deck();
+sample.shuffle();
