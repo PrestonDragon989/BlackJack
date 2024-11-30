@@ -115,6 +115,7 @@ export function draw_wager_options(ctx, canvas, current_wager) {
     // Button Variables
     let major_box_y = button_cord[1] + 125;
     let minor_box_y = button_cord[1] + 130;
+    let all_box_y = button_cord[1] + 115;
 
     let major_box_sides = [90, 90];
     let minor_box_sides = [80, 80]; 
@@ -153,6 +154,17 @@ export function draw_wager_options(ctx, canvas, current_wager) {
     ctx.font = "55px pixel_font";
     ctx.fillStyle = shapes.DARK_GREEN;
     ctx.fillText(wager_text, ...shapes.get_centered_position(ctx, wager_text, ...button_cord, button_dimensions[0], button_dimensions[1] / 2));
+
+    // All In Button
+    let all_size = [110, 110];
+    let all_cord = [button_dimensions[0] / 2 - (all_size[0] / 2) + button_cord[0], all_box_y];
+
+    shapes.draw_filled_rect(ctx, ...all_cord, ...all_size, shapes.NEON_GREEN);
+    shapes.draw_hollow_rect(ctx, ...all_cord, ...all_size, shapes.DARK_GREEN, 7);
+
+    ctx.font = "60px pixel_font";
+    ctx.fillStyle = shapes.DARK_GREEN;
+    ctx.fillText("All", ...shapes.get_centered_position(ctx, "All", ...all_cord, all_size[0], all_size[1] - 12));
 }
 
 export function show_player_money(canvas, ctx, money) {

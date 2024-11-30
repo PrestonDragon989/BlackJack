@@ -39,6 +39,12 @@ export default class MainGameInputController {
             y: 476,
             width: 80,
             height: 80
+        },
+        "All": {
+            x: 279,
+            y: 461,
+            width: 110,
+            height: 110
         }
     };
     static PLAYER_STAGE_BUTTONS = {
@@ -315,8 +321,16 @@ export default class MainGameInputController {
             this.#wager += 1;
         } else if (base.is_clicked("Sub1")) {
             this.#wager -= 1;
+        } else if (base.is_clicked("All")) {
+            this.#wager = this.#player_money + 1;
         }
-        this.#wager = Math.min(Math.max(this.#wager, 1), Math.min(this.#player_money, this.#dealer_money));
+
+
+        if (this.#dealer_money != "infinite") {
+            this.#wager = Math.min(Math.max(this.#wager, 1), Math.min(this.#player_money, this.#dealer_money));
+        } else {
+            this.#wager = Math.min(Math.max(this.#wager, 1), Math.min(this.#player_money, this.#player_money));
+        }
     }
 
     // Stage Managers

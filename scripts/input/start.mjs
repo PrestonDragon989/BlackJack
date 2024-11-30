@@ -124,7 +124,9 @@ export default class StartInputController {
         } else if (mode == "infinite") {
             amounts["dealer"] = "infinite";
         } 
-        amounts["dealer"] = Math.max(amounts["dealer"], 1);
+        if (amounts["dealer"] != "infinite")
+            amounts["dealer"] = Math.max(amounts["dealer"], 1);
+        
         return amounts;
     }
 }
