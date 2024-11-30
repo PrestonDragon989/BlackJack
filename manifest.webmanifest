@@ -13,7 +13,7 @@
     
     "icons": [
         {
-          "src": "/Blackjack/card-images/favicon.png",
+          "src": "/BlackJack/card-images/favicon.png",
           "type": "image/png",
           "sizes": "70x100"
         }
